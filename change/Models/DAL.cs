@@ -55,8 +55,8 @@ namespace change.Models
                 Country = "Canada"
             };
             Currencies.Add(currency2);
-            //currency1.AddRate(1, 3.1, DateTime.Now);
-            //currency2.AddRate(1, 2.47, DateTime.Now);
+            currency1.AddRate(1, 3.1, DateTime.Now);
+            currency2.AddRate(1, 2.47, DateTime.Now);
             SaveChanges();
         }
 

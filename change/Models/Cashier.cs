@@ -66,5 +66,11 @@ namespace change.Models
             CashRegisters.Add(newCashRegister);
             return newCashRegister;
         }
+        public CashRegister AddNewCashRegister(List<SumCurrency> sums)
+        {
+            CashRegister newCash = new CashRegister() { Sums = sums, Cashier = this };
+            CashRegisters.Add(newCash);
+            return newCash;
+        }
     }
 }

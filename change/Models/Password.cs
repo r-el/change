@@ -8,13 +8,13 @@ namespace change.Models
 {
     // יש צורך בטבלא שתזכור את כל הסיסמאות שהיו בעבר
     // מכיוון שכל תקופה מסוימת
-    // המשתמש צריך להחליף סיסמא לסיסמא חדשה שלא היתה בעבר
+    // הקופאי צריך להחליף סיסמא לסיסמא חדשה שלא היתה בעבר
     public class Password
     {
         [Key]
         public int ID { get; set; }
 
-        public User User { get; set; }
+        public Cashier Cashier { get; set; }
 
         [Display(Name = "סיסמא")]
         [DataType(DataType.Password)]

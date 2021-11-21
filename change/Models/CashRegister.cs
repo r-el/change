@@ -14,7 +14,7 @@ namespace change.Models
         // id-מספר רנדומלי להגברת האבטחה, מתווסף ל
         public int RandomNumber { get; set; }
 
-        public User User { get; set; }
+        public Cashier Cashier { get; set; }
 
         [Timestamp]
         public byte[] DateTimeInDB { get; set; }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace change.Models
 {
-    public class User
+    public class Cashier
     {
-        // -------------------------- User Details -------------------------- //
+        // -------------------------- Cashier Details -------------------------- //
 
         [Key]
         public int ID { get; set; }
@@ -37,7 +37,7 @@ namespace change.Models
         [Display(Name = "האם פעיל?")]
         public bool IsActive { get; set; } = true;
 
-        // -------------------------- User Passwords -------------------------- //
+        // -------------------------- Cashier Passwords -------------------------- //
 
         public List<Password> Passwords { get; set; }
 
@@ -52,17 +52,17 @@ namespace change.Models
             {
                 password.Current = false;
             }
-            Passwords.Add(new Password { User = this, MyPassword = newPassword, Current = true, ExpiryDate = DateTime.Now.AddDays(180) });
+            Passwords.Add(new Password { Cashier = this, MyPassword = newPassword, Current = true, ExpiryDate = DateTime.Now.AddDays(180) });
             return "הסיסמא הוחלפה בהצלחה";
         }
 
-        // ----------------------- User CashRegisters ----------------------- //
+        // ----------------------- Cashier CashRegisters ----------------------- //
 
         public List<CashRegister> CashRegisters { get; set; }
 
         public CashRegister AddNewCashRegister()
         {
-            CashRegister newCashRegister = new CashRegister() { User = this };
+            CashRegister newCashRegister = new CashRegister() { Cashier = this };
             CashRegisters.Add(newCashRegister);
             return newCashRegister;
         }

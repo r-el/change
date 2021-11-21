@@ -40,5 +40,20 @@ namespace change.Models
         // -------------------------- User Passwords -------------------------- //
 
         public List<Password> Passwords { get; set; }
+
+        public string AddPassword(string newPassword)
+        {
+            foreach (Password password in Passwords)
+            {
+                if (password.MyPassword == newPassword)
+                    return "השתמשת בסיסמא זו בעבר. נסה סיסמא חדשה";
+            }
+            foreach (Password password in Passwords)
+            {
+                password.Current = false;
+            }
+            Passwords.Add(new Password { User = this, MyPassword = newPassword, Current = true, ExpiryDate = DateTime.Now.AddDays(180) });
+            return "הסיסמא הוחלפה בהצלחה";
+        }
     }
 }

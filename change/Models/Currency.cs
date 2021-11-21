@@ -24,6 +24,6 @@ namespace change.Models
         public string NameAndCountry { get { return Name + " " + Country; } }
 
         // רשימת מטבעות מעודכנים מאתר בנק ישראל
-        public List<CurrencyValueByDate> CurrencyValue { get; set; }
+        public List<CurrencyValueByDate> Rates { get; set; }
     }
 }

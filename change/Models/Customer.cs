@@ -26,5 +26,7 @@ namespace change.Models
 
         [Display(Name = "תמונה")]
         public byte[] Photo { get; set; }
+
+        public List<Transaction> Transactions { get; set; }
     }
 }

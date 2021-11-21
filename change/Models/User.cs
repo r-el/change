@@ -8,6 +8,8 @@ namespace change.Models
 {
     public class User
     {
+        // -------------------------- User Details -------------------------- //
+
         [Key]
         public int ID { get; set; }
 
@@ -34,5 +36,9 @@ namespace change.Models
 
         [Display(Name = "האם פעיל?")]
         public bool IsActive { get; set; } = true;
+
+        // -------------------------- User Passwords -------------------------- //
+
+        public List<Password> Passwords { get; set; }
     }
 }

@@ -55,5 +55,9 @@ namespace change.Models
             Passwords.Add(new Password { User = this, MyPassword = newPassword, Current = true, ExpiryDate = DateTime.Now.AddDays(180) });
             return "הסיסמא הוחלפה בהצלחה";
         }
+
+        // ----------------------- User CashRegisters ----------------------- //
+
+        public List<CashRegister> CashRegisters { get; set; }
     }
 }

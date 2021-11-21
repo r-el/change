@@ -59,5 +59,12 @@ namespace change.Models
         // ----------------------- User CashRegisters ----------------------- //
 
         public List<CashRegister> CashRegisters { get; set; }
+
+        public CashRegister AddNewCashRegister()
+        {
+            CashRegister newCashRegister = new CashRegister() { User = this };
+            CashRegisters.Add(newCashRegister);
+            return newCashRegister;
+        }
     }
 }

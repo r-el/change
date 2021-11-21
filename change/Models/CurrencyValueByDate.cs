@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace change.Models
 {
+    // Currency values are updated
+    // From the Bank of Israel API
+
     public class CurrencyValueByDate
     {
         [Key]

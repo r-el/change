@@ -33,5 +33,7 @@ namespace change.Models
 
         [Display(Name = "זמן סגירה")]
         public byte[] DateTimeInClose { get; set; }
+
+        public List<SumCurrency> Sums { get; set; } // בבוקר
     }
 }
